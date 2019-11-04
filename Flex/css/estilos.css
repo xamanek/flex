@@ -1,0 +1,68 @@
+body {
+	margin:0px;
+}
+header, footer {
+	background-color: #0072a6;
+	padding: 50px;
+	color:white;
+}
+section {
+	padding:20px;
+	border-bottom:1px solid #0072a6;
+}
+section > div {
+	padding: 5px;
+	background-color: #ddd;
+}
+section > div > div {
+	padding: 15px;
+	background-color: #fff;
+	width:50px;
+	height:50px;
+	border:1px solid #666;
+	font-size:30px;
+	text-align:center;
+	line-height:55px;
+}
+
+/***** Inicio del Flex *****/
+
+#direccion {
+	display:flex;
+	flex-direction:row;
+	/***  flex-direction: row | row-reverse | column | column-reverse ; ***/
+}
+#adjustes {
+	display:flex;
+	flex-wrap:wrap-reverse;
+	flex-direction:row-reverse;
+	/*** flex-wrap: nowrap | wrap | wrap-reverse  ***/
+}
+#adjustes > div {
+	width:120px;
+}
+#alineacionh {
+	display:flex;
+	justify-content: space-around;
+	/*** justify-content: flex-start | flex-end | center | space-between | space-around; ***/
+}
+#alineacionv {
+	display:flex;
+	height: 300px;
+	align-items: baseline;
+	
+	/*** align-items: flex-start | flex-end | center | baseline | stretch;
+	N.B. per lo STRETCH l'altezza deve sempre essere AUTO e non preimpostata. Quindi mettere al div height:auto;***/
+}
+#alineacionv div:first-child{
+	height:80px;
+	font-size:1.2em;
+}
+#alineacionv div:last-child{
+	height:100px;
+	font-size:4.2em;
+}
+#alineacionv div:nth-of-type(3){
+	height:20px;
+	font-size:0.8em;
+}
